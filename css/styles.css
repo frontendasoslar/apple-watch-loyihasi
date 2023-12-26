@@ -1,3 +1,38 @@
+
+/* Roboto 400, Roboto 700 */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.woff2") format("woff2"),
+      url("Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.woff2") format("woff2"),
+      url("Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+ :root {
+  --normal-fonts: "Roboto", "Arial", sans-serif;
+  --normal-fonts-color: #333;
+  --normal-fonts-weight: 400;
+  --normal-fonts-line-heigh: 1.5;
+  --normal-font-style: normal;
+  --title-fonts-weight: 700;
+  --normal-font-size: 16px;
+  --font-size-button: 18px;
+  --color-text-button: #fff;
+  --baground-color-button: #EA625C;
+  --baground-color-button-hover: #c9514c;
+
+ }
+
+
 /* GLOBAL STYLES */
 html {
   box-sizing: border-box;
@@ -32,6 +67,11 @@ img {
   height: auto;
 }
 
+*:focus {
+  outline: 1px dashed #ea625c;
+  outline-offset: 3px;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -46,4 +86,164 @@ img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  margin-bottom: 79.46px;
+}
+.site-logo {
+  width: 100%;
+  max-width: 35px;
+  height: 100%;
+  max-height: 41.543px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-right: auto;
+  object-fit: contain;
+}
+.site-header-nav {
+  display: flex;
+  align-items: center;
+  justify-content:end;
+  padding: 0;
+  margin: 0;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 40px;
+}
+
+.site-header-list:not(:last-child) {
+  margin-right: 30px;
+}
+.site-header-link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: var(--normal-fonts);
+  color: var(--normal-fonts-color);
+  font-weight: var(--normal-fonts-weight);
+  line-height: var(--normal-fonts-line-heigh);
+  font-style: var(--normal-font-style);
+  font-size: 15px;
+  text-align: center;
+}
+
+.site-header-link:hover {
+  border-bottom: 1px solid #666;
+  margin-bottom: 6px;
+}
+
+
+.help-section {
+  width: 165px;
+  padding:0;
+  margin: 0;
+  border: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 15px;
+  font-family: var(--normal-fonts);
+  font-style: var(--normal-font-style);
+  font-weight: var(--normal-fonts-weight);
+  line-height: var(--normal-fonts-line-heigh);
+  color: #666;
+  border-bottom: 1px solid var(--normal-fonts-color);
+}
+
+/* HERO */
+.site-hero {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/intro-bg.png");
+  background-repeat: no-repeat;
+}
+
+.hero {
+ border-bottom: 2px solid #ddd;
+ padding-top: 140px;
+ padding-bottom: 185px;
+ background-image: url("../img/intro-bg.jpg");
+ background-repeat: no-repeat;
+ background-position: left calc(50% + 550px) bottom;
+}
+
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+.lead-cta-heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: var(--normal-fonts);
+  font-weight: var(--title-fonts-weight);
+  font-style: var(--normal-font-style);
+  line-height: 1.2;
+  color: #000;
+}
+.lead-cta-text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: var(--normal-fonts);
+  font-weight: var(--normal-fonts-weight);
+  font-size: var(--normal-font-size);
+  line-height: var(--normal-fonts-line-heigh);
+  color: #777;
+  border-left: 3px solid #888;
+ padding-left: 37px;
+}
+.button {
+  padding: 12px 35px;
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  font-size: var(--font-size-button);
+  font-weight: var(--title-fonts-weight);
+  color: var(--color-text-button);
+  background-color: var(--baground-color-button);
+  text-transform: uppercase;
+  line-height: var(--normal-fonts-line-heigh);
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+ background-color: var(--baground-color-button-hover);
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  .hero {
+    background-image: url("../img/intro-bg@2x.jpg");
+  }
+
 }
