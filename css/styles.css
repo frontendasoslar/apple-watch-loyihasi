@@ -1,5 +1,4 @@
 
-/* Roboto 400, Roboto 700 */
 @font-face {
   font-family: "Roboto";
   src: url("Roboto-Regular.woff2") format("woff2"),
@@ -8,7 +7,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Roboto";
   src: url("Roboto-Bold.woff2") format("woff2"),
@@ -29,7 +27,6 @@
   --color-text-button: #fff;
   --baground-color-button: #EA625C;
   --baground-color-button-hover: #c9514c;
-
  }
 
 
@@ -74,7 +71,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   padding-left: 50px;
   padding-right: 50px;
   margin-left: auto;
@@ -234,6 +231,125 @@ img {
 }
 
 
+.feauture {
+}
+
+.feauture-list {
+  padding: 0;
+  margin: 0;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  list-style: none;
+  display: flex;
+
+}
+.feauture-list-itm {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 280px;
+}
+
+.feauture-list-itm:not(:last-child) {
+  margin-right: 80px;
+}
+.feauture-list-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-family: var(--normal-fonts);
+  font-style: var(--normal-font-style);
+  font-weight: var(--title-fonts-weight);
+  text-transform: uppercase;
+  color: #222;
+}
+.feauture-list-text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: var(--normal-fonts);
+  font-style: var(--normal-font-style);
+  font-weight: var(--normal-fonts-weight);
+  line-height: 160%;
+  color: var(--normal-fonts-color);
+}
+.feauture-list-divider {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.site-feauture-divider-line {
+  padding: 0;
+  margin: 0;
+  width: 8px;
+  height: 8px;
+  border: 0;
+  background-color: #ddd;
+}
+
+.site-feauture-divider-line:not(:last-child) {
+  margin-right: 10px;
+}
+
+.more-info-text {
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-fonts-weight);
+  font-family: var(--normal-fonts);
+  font-style: var(--normal-font-style);
+  font-weight: var(--title-fonts-weight);
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #EA625C;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+.more-info-text::before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #EA625C;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 10px;
+  transition: width 0.5s ease;
+}
+
+.more-info-text:hover:before {
+  content: "";
+  width: 60px;
+}
+.site-feauture-divider-line-itm {
+  width: 40px;
+  height: 3px;
+  border: 0;
+  background-color: #EA625C;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+
+.site-feauture-divider {
+  padding: 0;
+  margin: 0;
+}
+
+/* PROMO */
+.promo {
+  padding-top: 176px;
+  padding-bottom: 176px;
+  background-image: url("../img/watch-in-hand.jpg");
+ background-repeat: no-repeat;
+ background-position: left calc(50% + 300px) center;
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -244,6 +360,10 @@ only screen and (                min-resolution: 2dppx) {
 
   .hero {
     background-image: url("../img/intro-bg@2x.jpg");
+  }
+
+  .promo {
+    background-image: url("../img/watch-in-hand@2x.jpg")
   }
 
 }
