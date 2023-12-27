@@ -303,7 +303,7 @@ img {
   line-height: 160%;
   text-transform: uppercase;
   color: #EA625C;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
 
