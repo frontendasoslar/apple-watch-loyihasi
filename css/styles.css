@@ -349,6 +349,30 @@ img {
  background-position: left calc(50% + 300px) center;
 }
 
+/* RUNNERS */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url("../img/Group-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.runner {
+  margin-left: 500px;
+}
+
+.runners-cta-heading {
+ color: #fff;
+}
+
+.runners-cta-text {
+  color: #fff;
+  border-left: 3px solid #fff;
+ padding-left: 37px;
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
