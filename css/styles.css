@@ -390,4 +390,8 @@ only screen and (                min-resolution: 2dppx) {
     background-image: url("../img/watch-in-hand@2x.jpg")
   }
 
+  .runners {
+    background-image: url("../img/Group-1@2x.jpg");
+  }
+
 }
